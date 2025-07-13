@@ -1,0 +1,339 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #1a1a1a;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+.clickable_cards_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+}
+
+.cards {
+    height: 450px;
+    width: 300px;
+    perspective: 1000px;
+}
+
+.clicked {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.card_content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.clicked:checked ~ .card_content {
+    transform: rotateY(180deg);
+}
+
+.front_card, .back_card {
+    transform-style: preserve-3d;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+}
+
+.front_card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #333;
+}
+
+img {
+    max-width: 100px;
+    max-height: 40px;
+    object-fit: contain;
+}
+
+
+.front_card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    z-index: 1;
+}
+
+.back_card {
+    transform: rotateY(180deg);
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #222;
+    display: flex;
+    flex-direction: column;
+}
+
+.back_card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+.inner {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    margin: 0 0 15px 0;
+    font-size: 24px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.button, .going_back {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #e62429;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    border: none;
+    margin-top: 15px;
+}
+
+.button {
+    align-self: flex-start;
+}
+
+.going_back {
+    align-self: flex-end;
+    background: #333;
+    border: 1px solid #e62429;
+    margin-top: auto;
+}
+
+.button:hover, .going_back:hover {
+    background: #ff4d53;
+    transform: translateY(-2px);
+}
+
+.info_row {
+    margin-bottom: 15px;
+}
+
+.info_row span:first-child {
+    display: block;
+    font-size: 14px;
+    color: #aaa;
+    margin-bottom: 5px;
+}
+
+.game_info span {
+    color: white;
+    font-size: 16px;
+}
+
+.summary_container {
+  flex-grow: 1;
+  overflow: hidden;
+  margin-top: 5px;
+}
+
+.summary {
+    height: 100%;
+    overflow-y: auto;
+    padding-right: 10px;
+    font-size: 14px;
+    line-height: 1.5;
+    scrollbar-width: thin;
+    scrollbar-color: #e62429 #333;
+}
+
+.summary::-webkit-scrollbar {
+    width: 6px;
+}
+
+.summary::-webkit-scrollbar-track {
+    background: #333;
+    border-radius: 3px;
+}
+
+.summary::-webkit-scrollbar-thumb {
+    background-color: #e62429;
+    border-radius: 3px;
+}
+
+.summary p {
+    margin: 0 0 10px 0;
+    padding-right: 5px;
+}
+
+@media (max-width: 768px) {
+    .cards {
+        width: 280px;
+        height: 420px;
+    }
+}
+
+@media (max-width: 480px) {
+    .clickable_cards_container {
+        gap: 20px;
+    }
+    
+    .cards {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+.front_card_2 {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    border-radius: 6px;
+}
+
+.front_card_2::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    z-index: 1;
+    border-radius: 6px;
+}
+
+.front_card, .front_card_2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #333;
+}
+
+.cards:nth-child(2) .back_card {
+    background-size: cover;
+    background-position: center;
+}
+
+.front_card_3 {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    border-radius: 6px;
+}
+
+.front_card_3::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    z-index: 1;
+    border-radius: 6px;
+}
+
+.front_card, .front_card_3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #333;
+}
+
+.cards:nth-child(3) .back_card {
+    background-size: cover;
+    background-position: center;
+}
+
+.front_card_4 {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    border-radius: 6px;
+}
+
+.front_card_4::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    z-index: 1;
+    border-radius: 6px;
+}
+
+.front_card, .front_card_4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #333;
+}
+
+.cards:nth-child(4) .back_card {
+    background-size: cover;
+    background-position: center;
+}
