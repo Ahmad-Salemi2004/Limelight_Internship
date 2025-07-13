@@ -1,272 +1,208 @@
-* {
-    box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Flip Cards</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="clickable_cards_container">
 
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #1a1a1a;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100%;
-    margin: 0;
-    padding: 20px;
-}
+        <div class="cards">
+            <input type="checkbox" id="card_1" class="clicked">
+            <div class="card_content">
+                <div class="front_card" style="background-image: url(https://e.snmc.io/lk/l/x/8041e5562b0cc9f51034f453b637af98/10959333);">
+                    <div class="inner">
+                        <h2>The Walking Dead</h2>
+                        <label for="card_1" class="button">MORE</label>
+                    </div>
+                </div>
+                <div class="back_card" style="background-image: url(https://m.media-amazon.com/images/M/MV5BODIyOThmOWMtMDkyMi00NjhkLTlkOGYtMjY1ZDBjNTMzZGJiXkEyXkFqcGc@._V1_QL75_UX440_.jpg);">
+                    <div class="inner">
+                        <div class="info_row">
+                            <span>Episodes</span>
+                            <div class="game_info">
+                                <span>5 + DLC</span>
+                            </div>
+                        </div>
+                        <div class="info_row">
+                            <span>Rated</span>
+                            <div class="game_info">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/ESRB_Mature_17%2B.svg/430px-ESRB_Mature_17%2B.svg.png?20110324232959">
+                            </div>
+                        </div>
+                        <div class="info_row">
+                            <span>Platforms</span>
+                            <div class="game_info">
+                                <span>Playstation 3, Playstation 4, Playstation Vita, Xbox 360, Xbox One, Windows, Android/IOS, Nintendo Switch</span>
+                            </div>
+                        </div>
+                        <div class="info_row">
+                            <span>Developers</span>
+                            <div class="game_info">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Telltale_Games_logo.svg/1600px-Telltale_Games_logo.svg.png?20150906024250">
+                            </div>
+                        </div>
+                        <div class="summary_container">
+                            <div class="summary">
+                                <p>You play as Lee Everett, a convicted criminal who gets a second chance when the zombie apocalypse begins.</p>
+                                <p>After a car crash, Lee meets Clementine, an 8-year-old girl searching for her missing parents.</p>
+                                <p>Lee takes her under his wing, and together they join a group of survivors seeking refuge, and to find Clementine's parents.</p>
+                                <p>The game features multiple endings based on player choices throughout the episodes.</p>
+                                <p>Your decisions affect relationships with other characters and story outcomes.</p>
+                            </div>
+                        </div>
+                        <label for="card_1" class="going_back">BACK</label>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-.clickable_cards_container {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    gap: 30px;
-    width: 100%;
-}
+        <div class="cards">
+            <input type="checkbox" id="card_2" class="clicked">
+            <div class="card_content">
+                <div class="front_card_2" style="background-image: url(https://image.api.playstation.com/gs2-sec/appkgo/prod/CUSA01010_00/3/i_f5c0ea7f009f8fbbcde532c31f16b7c40bb49e4619a55c074cdb01bf1e51fdb6/i/pic0.png); background-position: 70% center;">
+                    <div class="inner">
+                        <h2>The Walking Dead: Season Two</h2>
+                        <label for="card_2" class="button">MORE</label>
+                    </div>
+                </div>
+                <div class="back_card" style="background-image: url(https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/261030/ss_454381383bf829f3a93f964a3b66192d129fa92e.1920x1080.jpg?t=1729703055);">
+                    <div class="inner">
+                        <div class="info_row">
+                            <span>Episodes</span>
+                            <div class="game_info">
+                                <span>5</span>
+                            </div>
+                        </div>
+                        <div class="info_row">
+                            <span>Rated</span>
+                            <div class="game_info">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/ESRB_Mature_17%2B.svg/430px-ESRB_Mature_17%2B.svg.png?20110324232959">
+                            </div>
+                        </div>
+                        <div class="info_row">
+                            <span>Platforms</span>
+                            <div class="game_info">
+                                <span>Playstation3, Playstation 4, Xbox 360, Xbox One, Windows, Android/IOS, Nintendo Switch</span>
+                            </div>
+                        </div>
+                        <div class="info_row">
+                            <span>Developers</span>
+                            <div class="game_info">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Telltale_Games_logo.svg/1600px-Telltale_Games_logo.svg.png?20150906024250">
+                            </div>
+                        </div>
+                        <div class="summary_container">
+                            <div class="summary">
+                                <p>Months after Lee's death, Clementine (now 11 years old) is traveling with Omid and Christa, but tragedy strikes, leaving her alone.</p>
+                                <p>She eventually joins a new group of survivors, including hardened leaders, distrustful strangers, and fellow outcasts.</p>
+                                <p>As tensions rise, Clem must decide who to trust—and how far she's willing to go to survive.</p>
+                            </div>
+                        </div>
+                        <label for="card_2" class="going_back">BACK</label>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-.cards {
-    height: 450px;
-    width: 300px;
-    max-width: 400px;
-    perspective: 1000px;
-}
-
-.clicked {
-    position: absolute;
-    opacity: 0;
-    pointer-events: none;
-}
-
-.card_content {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transform-style: preserve-3d;
-    transition: transform 0.5s;
-    border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
-}
-
-.clicked:checked ~ .card_content {
-    transform: rotateY(180deg);
-}
-
-.front_card, .back_card {
-    transform-style: preserve-3d;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    border-radius: 15px;
-    overflow: hidden;
-    background-size: cover;
-    background-position: center;
-}
-
-.front_card {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    padding: 20px;
-    box-sizing: border-box;
-    background-color: #333;
-}
-
-img {
-    max-width: 100px;
-    max-height: 40px;
-    object-fit: contain;
-}
-
-
-.front_card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
-    z-index: 1;
-}
-
-.back_card {
-    transform: rotateY(180deg);
-    padding: 20px;
-    box-sizing: border-box;
-    background-color: #222;
-    display: flex;
-    flex-direction: column;
-}
-
-.back_card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.7);
-    z-index: 1;
-}
-
-.inner {
-    position: relative;
-    z-index: 2;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-h2 {
-    margin: 0 0 15px 0;
-    font-size: 24px;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
-}
-
-.button, .going_back {
-    display: inline-block;
-    padding: 10px 20px;
-    background: #e62429;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    text-align: center;
-    cursor: pointer;
-    transition: all 0.3s;
-    border: none;
-    margin-top: 15px;
-}
-
-.button {
-    align-self: flex-start;
-}
-
-.going_back {
-    align-self: flex-end;
-    background: #333;
-    border: 1px solid #e62429;
-    margin-top: auto;
-}
-
-.button:hover, .going_back:hover {
-    background: #ff4d53;
-    transform: translateY(-2px);
-}
-
-.info_row {
-    margin-bottom: 15px;
-}
-
-.info_row span:first-child {
-    display: block;
-    font-size: 14px;
-    color: #aaa;
-    margin-bottom: 5px;
-}
-
-.game_info span {
-    color: white;
-    font-size: 16px;
-}
-
-.summary_container {
-  flex-grow: 1;
-  overflow: hidden;
-  margin-top: 5px;
-}
-
-.summary {
-    height: 100%;
-    overflow-y: auto;
-    padding-right: 10px;
-    font-size: 14px;
-    line-height: 1.5;
-    scrollbar-width: thin;
-    scrollbar-color: #e62429 #333;
-}
-
-.summary::-webkit-scrollbar {
-    width: 6px;
-}
-
-.summary::-webkit-scrollbar-track {
-    background: #333;
-    border-radius: 3px;
-}
-
-.summary::-webkit-scrollbar-thumb {
-    background-color: #e62429;
-    border-radius: 3px;
-}
-
-.summary p {
-    margin: 0 0 10px 0;
-    padding-right: 5px;
-}
-
-@media (max-width: 768px) {
-    .cards {
-        width: 280px;
-        height: 420px;
-    }
-}
-
-@media (max-width: 480px) {
-    .clickable_cards_container {
-        gap: 20px;
-    }
-    
-    .cards {
-        width: 100%;
-        max-width: 300px;
-    }
-}
-
-.front_card_2, .front_card_3, .front_card_4 {
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center center;
-    position: absolute;
-    top: 0;
-    left: 0;
-    backface-visibility: hidden;
-    transform-style: preserve-3d;
-    border-radius: 6px;
-}
-
-.front_card_2::before, .front_card_3::before, .front_card_4::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
-    z-index: 1;
-    border-radius: 6px;
-}
-
-.front_card, .front_card_2, .front_card_3, .front_card_4 {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    padding: 20px;
-    box-sizing: border-box;
-    background-color: #333;
-}
-
-.cards:nth-child(2) .back_card {
-    background-size: cover;
-    background-position: center;
-}
-
-.cards:nth-child(3) .back_card {
-    background-size: cover;
-    background-position: center;
-}
-
-.cards:nth-child(4) .back_card {
-    background-size: cover;
-    background-position: center;
-}
+        <div class="cards">
+            <input type="checkbox" id="card_3" class="clicked">
+            <div class="card_content">
+                <div class="front_card_3" style="background-image: url(https://www.theworkprint.com/wp-content/uploads/2016/12/twd-a-new-frontier-1.jpg);">
+                    <div class="inner">
+                        <h2>The Walking Dead: A New Frontier</h2>
+                        <label for="card_3" class="button">MORE</label>
+                    </div>
+                </div>
+                <div class="back_card" style="background-image: url(https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/536220/ss_222d4e351a5634c298995a26f03e0563b11e064e.1920x1080.jpg?t=1729702791); background-position: 40%">
+                    <div class="inner">
+                        <div class="info_row">
+                            <span>Episodes</span>
+                            <div class="game_info">
+                                <span>5</span>
+                            </div>
+                        </div>
+                        <div class="info_row">
+                            <span>Rated</span>
+                            <div class="game_info">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/ESRB_Mature_17%2B.svg/430px-ESRB_Mature_17%2B.svg.png?20110324232959";>
+                            </div>
+                        </div>
+                        <div class="info_row">
+                            <span>Platforms</span>
+                            <div class="game_info">
+                                <span>Playstation 4, Xbox One, Android/IOS, Windows, Nintendo Switch</span>
+                            </div>
+                        </div>
+                        <div class="info_row">
+                            <span>Developers</span>
+                            <div class="game_info">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Telltale_Games_logo.svg/1600px-Telltale_Games_logo.svg.png?20150906024250">
+                            </div>
+                        </div>
+                        <div class="summary_container">
+                            <div class="summary">
+                                <p>Years after Season 2, Clementine (now around 13) is a lone wanderer, searching for safety while protecting AJ (Alvin Junior).</p>
+                                <p>Meanwhile, Javier García, a former baseball player, struggles to keep his fractured family alive.</p>
+                                <p>Their paths cross with The New Frontier, a powerful but ruthless survivor group, leading to betrayals, brutal choices, and a fight for redemption.</p>
+                            </div>
+                        </div>
+                        <label for="card_3" class="going_back">BACK</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+  
+  <div class="cards">
+    <input type="checkbox" id="card_4" class="clicked">
+    <div class="card_content">
+      <div class="front_card_4" style="background-image: url(https://image.api.playstation.com/cdn/EP2026/CUSA12026_00/ASmyw7u7Tx1vic2zdRaRBKvvWVxj9t2W.jpg); background-position: 75%">
+        <div class="inner">
+          <h2>The Walking Dead: The Final Season</h2>
+          <label for="card_4" class="button">MORE</label>
+        </div>
+      </div>
+      <div class="back_card" style="background-image: url(https://cdn.wccftech.com/wp-content/uploads/2018/09/WCCFwalkingdeadtelltalefinalseason11.jpg);">
+        <div class="inner">
+          <div class="info_row">
+            <Span>Episodes</span>
+            <div class="game_info">
+              <span>4</span>
+            </div>
+          </div>
+          <div class="info_row">
+            <span>Rated</span>
+            <div class="game_info">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/ESRB_Mature_17%2B.svg/430px-ESRB_Mature_17%2B.svg.png?20110324232959";>
+            </div>
+          </div>
+          <div class="info_row">
+            <span>Platforms</span>
+            <div class="game_info">
+              <span>Playstation 4, Xbox One, Windows, Nintendo Switch</span>
+            </div>
+          </div>
+          <div class="info_row">
+            <span>Developers</span>
+            <div class="game_info">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Telltale_Games_logo.svg/1600px-Telltale_Games_logo.svg.png?20150906024250">
+              <img src="https://www.gematsu.com/wp-content/uploads/2021/12/Company-Logo_Skybound-Games-320x208.png">
+            </div>
+          </div>
+          <div class="summary_container">
+            <div class="summary">
+              <p>Years after A New Frontier, Clementine (now 16) and AJ (around 5) are surviving on their own, scavenging for food and shelter.</p>
+              <p>After a walker attack leaves them stranded, they stumble upon Ericson’s Boarding School, a secluded haven run by a group of troubled but resourceful teenagers.</p>
+              <p>Clem must earn their trust while teaching AJ how to survive in a world where innocence is a liability.</p>
+            </div>
+          </div>
+          <label for="card_4" class="going_back">BACK</label>
+        </div>
+      </div>
+    </div>
+   </div>
+  </div>
+</body>
+</html>
