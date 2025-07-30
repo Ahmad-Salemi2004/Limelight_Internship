@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
+  const content = document.querySelector('.content');
   const pLayer1 = document.querySelector('.p_layer-1');
   const pLayer2 = document.querySelector('.p_layer-2');
-  const content = document.querySelector('.content');
 
   const transitionThreshold = 300; 
 
