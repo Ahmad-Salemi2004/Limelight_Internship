@@ -1,0 +1,198 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Press Start 2P', monospace;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  color: white;
+  background: transparent;
+}
+
+body {
+  height: 300vh;
+  overflow-y: scroll;
+}
+
+.scroll-indicator {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 12px 24px;
+  border: 2px solid #fff;
+  border-radius: 30px;
+  color: white;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.parallax {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+}
+
+.p_layer-1 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://i.redd.it/24rvh4xu2qz71.png');
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+.title-container {
+  background: black;
+  position: absolute;
+  top: 148vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+  z-index: 8;
+  padding: 210px;
+}
+
+.title-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 800px;
+  z-index: 4;
+}
+
+.parallax-img {
+  position: absolute;
+  width: 130px;
+  height: 130px;
+  object-fit: contain;
+  image-rendering: pixelated;
+  z-index: 5;
+  will-change: transform;
+}
+
+.img-1 {
+  top: 5%;
+  left: 15%;
+}
+
+.img-2 {
+  top: 30%;
+  left: 60%;
+}
+
+.img-3 {
+  top: 60%;
+  left: 40%;
+}
+
+.content {
+  position: absolute;
+  top: 172vh;
+  width: 100vw;
+  left: 0;
+  z-index: 10;
+  background-image: url('https://sm.ign.com/ign_nordic/news/d/deltarune-/deltarune-chapters-3-and-4-are-launching-alongside-the-ninte_r3f4.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  padding-bottom: 50px;
+}
+
+.content-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+section {
+  margin: 30px 0;
+  padding: 25px;
+  background: rgba(0, 0, 0, 0.4);
+  border: 3px solid rgb(7, 216, 240);
+  box-shadow: 5px 5px 0 black;
+}
+
+h2 {
+  color: #ff66b3;
+  margin-bottom: 20px;
+  text-shadow: 3px 3px 0 black;
+  font-size: 1.5rem;
+}
+
+p {
+  color: #21cb11;
+  margin-bottom: 20px;
+  line-height: 1.6;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .scroll-indicator {
+      font-size: 0.7rem;
+      padding: 8px 16px;
+  }
+    
+  .title-image {
+      width: 90%;
+  }
+    
+  .title-container {
+      width: 95%;
+      padding: 20px;
+  }
+    
+  .parallax-img {
+      width: 100px;
+      height: 100px;
+  }
+    
+  .img-1 {
+      top: 35%;
+      left: 10%;
+  }
+    
+  .img-2 {
+      top: 75%;
+      left: 75%;
+  }
+    
+  .img-3 {
+      top: 55%;
+      left: 35%;
+  }
+    
+  .content-container {
+      padding: 15px;
+  }
+    
+  section {
+      padding: 20px;
+      margin: 25px 0;
+  }
+    
+  h2 {
+      font-size: 1.2rem;
+  }
+    
+  p {
+      font-size: 0.8rem;
+  }
+}
