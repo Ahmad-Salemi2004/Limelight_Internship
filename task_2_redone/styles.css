@@ -1,3 +1,15 @@
+:root {
+  --bg-dark: black;
+  --bg-transparent: rgba(0, 0, 0, 0.6);
+  --accent-blue: rgb(7, 216, 240);
+  --text-green: #21cb11;
+  --text-pink: #ff66b3;
+  --border-white: #fff;
+  --character-size: 130px;
+  --character-size-mobile: 100px;
+  --title-max-width: 800px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -8,14 +20,16 @@
 body, html {
   width: 100%;
   height: 100%;
-  overflow-x: hidden;
   color: white;
   background: transparent;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; 
 }
 
 body {
-  height: 300vh;
+  min-height: 300vh;
   overflow-y: scroll;
+  overscroll-behavior-y: contain;
 }
 
 .scroll-indicator {
@@ -26,13 +40,19 @@ body {
   z-index: 100;
   background: rgba(0, 0, 0, 0.8);
   padding: 12px 24px;
-  border: 2px solid #fff;
+  border: 2px solid var(--border-white);
   border-radius: 30px;
   color: white;
   font-size: 0.9rem;
   display: flex;
   align-items: center;
   gap: 10px;
+  backdrop-filter: blur(2px);
+  transition: transform 0.3s ease;
+}
+
+.scroll-indicator:hover {
+  transform: translateX(-50%) scale(1.05);
 }
 
 .parallax {
@@ -57,7 +77,7 @@ body {
 }
 
 .title-container {
-  background: black;
+  background: var(--bg-dark);
   position: absolute;
   top: 148vh;
   left: 50%;
@@ -65,7 +85,7 @@ body {
   width: 100%;
   text-align: center;
   z-index: 8;
-  padding: 210px;
+  padding: 14vw; 
 }
 
 .title-image {
@@ -73,19 +93,20 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 100%;
-  max-width: 800px;
+  width: 90%;
+  max-width: var(--title-max-width);
   z-index: 4;
 }
 
 .parallax-img {
   position: absolute;
-  width: 130px;
-  height: 130px;
+  width: var(--character-size);
+  height: var(--character-size);
   object-fit: contain;
   image-rendering: pixelated;
   z-index: 5;
   will-change: transform;
+  transition: transform 0.2s ease-out;
 }
 
 .img-1 {
@@ -116,29 +137,36 @@ body {
 }
 
 .content-container {
-  max-width: 800px;
+  max-width: var(--title-max-width);
   margin: 0 auto;
   padding: 20px;
-  background: rgba(0, 0, 0, 0.6);
+  background: var(--bg-transparent);
+  backdrop-filter: blur(3px);
 }
 
 section {
   margin: 30px 0;
   padding: 25px;
   background: rgba(0, 0, 0, 0.4);
-  border: 3px solid rgb(7, 216, 240);
-  box-shadow: 5px 5px 0 black;
+  border: 3px solid var(--accent-blue);
+  box-shadow: 5px 5px 0 var(--bg-dark);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+  transform: translateY(-3px);
+  box-shadow: 8px 8px 0 var(--bg-dark);
 }
 
 h2 {
-  color: #ff66b3;
+  color: var(--text-pink);
   margin-bottom: 20px;
-  text-shadow: 3px 3px 0 black;
+  text-shadow: 3px 3px 0 var(--bg-dark);
   font-size: 1.5rem;
 }
 
 p {
-  color: #21cb11;
+  color: var(--text-green);
   margin-bottom: 20px;
   line-height: 1.6;
   font-size: 0.9rem;
@@ -146,53 +174,66 @@ p {
 
 @media (max-width: 768px) {
   .scroll-indicator {
-      font-size: 0.7rem;
-      padding: 8px 16px;
+    font-size: 0.7rem;
+    padding: 8px 16px;
+    top: 10px;
   }
-    
-  .title-image {
-      width: 90%;
-  }
-    
+  
   .title-container {
-      width: 95%;
-      padding: 20px;
+    padding: 5vw;
+    top: 140vh;
   }
-    
+  
   .parallax-img {
-      width: 100px;
-      height: 100px;
+    width: var(--character-size-mobile);
+    height: var(--character-size-mobile);
   }
-    
+  
   .img-1 {
-      top: 35%;
-      left: 10%;
+    top: 35%;
+    left: 10%;
   }
-    
+  
   .img-2 {
-      top: 75%;
-      left: 75%;
+    top: 75%;
+    left: 75%;
   }
-    
+  
   .img-3 {
-      top: 55%;
-      left: 35%;
+    top: 55%;
+    left: 35%;
   }
-    
+  
+  .content {
+    top: 160vh;
+  }
+  
   .content-container {
-      padding: 15px;
+    padding: 15px;
   }
-    
+  
   section {
-      padding: 20px;
-      margin: 25px 0;
+    padding: 20px;
+    margin: 25px 0;
   }
-    
+  
   h2 {
-      font-size: 1.2rem;
+    font-size: 1.2rem;
   }
-    
+  
   p {
-      font-size: 0.8rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media (prefers-reduced-motion) {
+  .parallax-img, 
+  .scroll-indicator,
+  section {
+    transition: none !important;
+  }
+  
+  .p_layer-1 {
+    background-attachment: scroll !important;
   }
 }
